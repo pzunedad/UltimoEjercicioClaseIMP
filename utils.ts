@@ -25,7 +25,7 @@ export const getDateTime = async (timezone: string) => {
     const url = `https://api-ninjas.com/api/worldtime?timezone=${timezone}`
     const data = await fetch(url,{
         headers: {
-            'X-Api-Key': 'API_KEY'
+            'X-Api-Key': API_KEY
           },
     })
     if(data.status!== 200) throw new GraphQLError("Error in the API")
