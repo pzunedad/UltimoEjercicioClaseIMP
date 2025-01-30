@@ -7,7 +7,7 @@ export const validatephone = async(phone:string) => {
     const url = `https://api-ninjas.com/api/validatephone?number=${phone}`
     const data = await fetch(url,{
         headers: {
-            'X-Api-Key': 'API_KEY'
+            'X-Api-Key': API_KEY
           },
     })
     if(data.status!== 200) throw new GraphQLError("Error in the API")
